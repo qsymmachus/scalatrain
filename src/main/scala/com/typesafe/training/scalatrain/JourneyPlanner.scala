@@ -6,6 +6,10 @@ class JourneyPlanner(trains: Set[Train]) {
     t.stations
   }
 
+  def trainsAt(station: Station): Set[Train] = trains.filter { t ⇒
+    t.stations.contains(station)
+  }
+
 }
 
 // vim: set ts=2 sw=2 sts=2 et:

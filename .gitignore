@@ -33,3 +33,6 @@ out/
 
 # CourseGen
 .tag
+
+# VIM
+*.swp

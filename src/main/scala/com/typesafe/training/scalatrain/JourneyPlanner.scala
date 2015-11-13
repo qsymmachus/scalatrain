@@ -10,6 +10,12 @@ class JourneyPlanner(trains: Set[Train]) {
     t.stations.contains(station)
   }
 
+  def stopsAt(station: Station): Set[(Time, Train)] =
+    for {
+      train ← trains
+      schedule ← train.schedule if schedule._2 == station
+    } yield schedule._1 → train // (schedule._1, train)
+
 }
 
 // vim: set ts=2 sw=2 sts=2 et:

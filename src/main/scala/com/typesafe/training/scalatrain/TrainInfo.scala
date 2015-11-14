@@ -4,9 +4,7 @@ sealed abstract class TrainInfo {
   def number : Int
 }
 
-case class InterCityExpress(number: Int, hasWifi: Boolean = false) extends TrainInfo {
-
-}
+case class InterCityExpress(number: Int, hasWifi: Boolean = false) extends TrainInfo
 
 case class RegionalExpress(number: Int) extends TrainInfo
 

@@ -18,6 +18,8 @@ case class Time(hours: Int = 0, minutes: Int = 0) {
 
   def -(that: Time): Int = minus(that)
 
+  override lazy val toString = f"$hours%02d:$minutes%02d"
+
 }
 
 // vim: set ts=2 sw=2 sts=2 et:

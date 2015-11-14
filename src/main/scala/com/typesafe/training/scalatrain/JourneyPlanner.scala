@@ -14,8 +14,8 @@ class JourneyPlanner(trains: Set[Train]) {
     for {
       train ← trains
       schedule ← train.schedule if schedule._2 == station
-    } yield schedule._1 → train // (schedule._1, train)
+      time = schedule._1
+    } yield (time, train)
 
 }
 
-// vim: set ts=2 sw=2 sts=2 et:

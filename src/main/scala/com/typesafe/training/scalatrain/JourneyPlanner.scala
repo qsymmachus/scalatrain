@@ -11,9 +11,8 @@ class JourneyPlanner(trains: Set[Train]) {
 
   def stopsAt(station: Station): Set[(Time, Train)] =
     for {
-      train ← trains
-      schedule ← train.schedule if schedule._2 == station
-      time = schedule._1
+      train <- trains
+      (time, thisStation) <- train.schedule if thisStation == station
     } yield (time, train)
 
 }
